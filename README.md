@@ -72,7 +72,7 @@ Create FoodShopDemo.exe:
 pyinstaller --name FoodShopDemo --onefile --windowed `
     --add-data "app;app" `
     --add-data "media;media" `
-    --icon "media/icons/logo.ico" `
+    --icon "media/icons/icon.ico" `
     main.py
 ```
 
