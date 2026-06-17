@@ -69,7 +69,11 @@ Build standalone executables using PyInstaller.
 Create FoodShopDemo.exe:
 
 ```bash
-pyinstaller --name FoodShopDemo --onefile --windowed --add-data "app;app" --add-data "media;media" main.py
+pyinstaller --name FoodShopDemo --onefile --windowed `
+    --add-data "app;app" `
+    --add-data "media;media" `
+    --icon "media/icons/logo.ico" `
+    main.py
 ```
 
 Inside the `dist/` directory you can find `FoodShopDemo.exe`
