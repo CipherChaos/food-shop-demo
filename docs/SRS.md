@@ -110,25 +110,83 @@
 
 ```bash
 food-shop-demo/
-├── app/                    # ماژول‌های اصلی برنامه
-│   ├── core/               # منطق اصلی و هسته برنامه
-│   ├── ui/                 # کامپوننت‌های رابط کاربری
-│   └── utils/              # توابع کمکی و ابزارها
-├── docs/                   # مستندات
-│   ├── architecture.md     # دیاگرام‌های معماری
-│   └── srs.md              # مستندات الزامات
-├── media/                  # تصاویر و آیکون‌ها
-│   ├── appetizers/         # تصاویر پیش‌غذاها
-│   ├── beverages/          # تصاویر نوشیدنی‌ها
-│   ├── desserts/           # تصاویر دسرها
-│   ├── fonts/              # فونت‌های استفاده شده
-│   ├── foods/              # تصاویر غذاهای اصلی
-│   └── icons/              # آیکون‌های برنامه
-├── reports/                # گزارشات تولید شده (رسیدها)
-├── tests/                  # تست‌های واحد
-├── main.py                 # نقطه ورود برنامه
-├── profile.json            # تنظیمات و اطلاعات کاربر
-└── requirements.txt        # وابستگی‌های پروژه
+├── app/                                    # ماژول‌های اصلی برنامه
+│   ├── constants.py                        # ثابت‌های برنامه
+│   ├── restaurant_app.py                   # کلاس اصلی برنامه
+│   ├── core/                               # منطق هسته برنامه
+│   │   ├── cart_manager.py                 # مدیریت سبد خرید
+│   │   └── __init__.py
+│   ├── ui/                                 # کامپوننت‌های رابط کاربری
+│   │   ├── avatar_button.py                # دکمه آواتار
+│   │   ├── cart_dialog.py                  # دیالوگ سبد خرید
+│   │   ├── menu_item_card.py               # کارت آیتم منو
+│   │   ├── menu_section.py                 # بخش منو
+│   │   ├── notification_popup.py           # نوتیفیکیشن
+│   │   ├── profile_dialog.py               # دیالوگ پروفایل
+│   │   ├── widgets.py                      # ویجت‌های سفارشی
+│   │   └── __init__.py
+│   └── utils/                              # ابزارها و توابع کمکی
+│       ├── date_utils.py                   # توابع تاریخ
+│       ├── excel_export.py                 # خروجی اکسل
+│       ├── profile_io.py                   # مدیریت فایل پروفایل
+│       └── __init__.py
+├── docs/                                   # مستندات
+│   ├── algorithm.md                        # الگوریتم برنامه
+│   ├── architecture.md                     # دیاگرام‌های معماری
+│   ├── flowchart-guide.png                 # راهنمای فلوچارت
+│   ├── flowchart.md                        # فلوچارت
+│   ├── requirements.txt                    # وابستگی‌های مستندات
+│   ├── SRS.md                              # مستندات الزامات
+│   └── WBS.md                              # ساختار شکست کار
+├── media/                                  # تصاویر و آیکون‌ها
+│   ├── appetizers/                         # تصاویر پیش‌غذاها
+│   │   ├── ceaser-salad.webp
+│   │   ├── chicken-soup.webp
+│   │   ├── kashk-bademjoon.webp
+│   │   ├── salad-olviye.webp
+│   │   └── sambooseh.webp
+│   ├── beverages/                          # تصاویر نوشیدنی‌ها
+│   │   ├── delester.webp
+│   │   ├── doogh.webp
+│   │   ├── mineral-water.webp
+│   │   └── nooshabeh.webp
+│   ├── desserts/                           # تصاویر دسرها
+│   │   ├── bastani-sonnati.webp
+│   │   ├── Cake.webp
+│   │   ├── faloodeh.webp
+│   │   ├── fereni.webp
+│   │   └── shole-zard.webp
+│   ├── fonts/                              # فونت‌ها
+│   │   ├── Vazirmatn-Bold.ttf
+│   │   └── Vazirmatn.ttf
+│   ├── foods/                              # تصاویر غذاهای اصلی
+│   │   ├── gheimeh.webp
+│   │   ├── ghormeh-sabzi.webp
+│   │   ├── joojeh-kabab.webp
+│   │   ├── kabab.webp
+│   │   ├── steak.webp
+│   │   └── zereshk-polo.webp
+│   └── icons/                              # آیکون‌ها
+│       └── icon.svg
+├── reports/                                # گزارشات تولید شده
+│   └── فاکتورفروش_20260617.xlsx            # نمونه فاکتور فروش
+├── tests/                                  # تست‌های واحد
+│   ├── conftest.py                         # تنظیمات تست
+│   ├── test_avatar_button.py               # تست دکمه آواتار
+│   ├── test_cart_dialog.py                 # تست دیالوگ سبد خرید
+│   ├── test_cart_manager.py                # تست مدیریت سبد خرید
+│   ├── test_date_utils.py                  # تست توابع تاریخ
+│   ├── test_excel_export.py                # تست خروجی اکسل
+│   ├── test_menu_item_card.py              # تست کارت آیتم منو
+│   ├── test_menu_section.py                # تست بخش منو
+│   ├── test_notification_popup.py          # تست نوتیفیکیشن
+│   ├── test_profile_dialog.py              # تست دیالوگ پروفایل
+│   ├── test_profile_io.py                  # تست مدیریت پروفایل
+│   └── test_widgets.py                     # تست ویجت‌ها
+├── main.py                                 # نقطه ورود برنامه
+├── profile.json                            # تنظیمات و اطلاعات کاربر
+├── README.md                               # راهنمای پروژه
+└── requirements.txt                        # وابستگی‌های پروژهوابستگی‌های پروژه
 ```
 
 
