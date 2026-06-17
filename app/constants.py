@@ -1,32 +1,42 @@
 import os
+import sys
+
+def resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller"""
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 PROFILE_FILE = "profile.json"
 
 MENU_IMAGES = {
     # Appetizers
-    "سالاد الویه": os.path.join("media", "appetizers", "salad-olviye.webp"),
-    "سالاد سزار": os.path.join("media", "appetizers", "ceaser-salad.webp"),
-    "سوپ مرغ": os.path.join("media", "appetizers", "chicken-soup.webp"),
-    "کشک بادمجان": os.path.join("media", "appetizers", "kashk-bademjoon.webp"),
-    "سمبوسه": os.path.join("media", "appetizers", "sambooseh.webp"),
+    "سالاد الویه": resource_path(os.path.join("media", "appetizers", "salad-olviye.webp")),
+    "سالاد سزار": resource_path(os.path.join("media", "appetizers", "ceaser-salad.webp")),
+    "سوپ مرغ": resource_path(os.path.join("media", "appetizers", "chicken-soup.webp")),
+    "کشک بادمجان": resource_path(os.path.join("media", "appetizers", "kashk-bademjoon.webp")),
+    "سمبوسه": resource_path(os.path.join("media", "appetizers", "sambooseh.webp")),
     # Main dishes
-    "قرمه سبزی": os.path.join("media", "foods", "ghormeh-sabzi.webp"),
-    "جوجه کباب": os.path.join("media", "foods", "joojeh kabab.webp"),
-    "کباب کوبیده": os.path.join("media", "foods", "kabab.webp"),
-    "زرشک پلو با مرغ": os.path.join("media", "foods", "zereshk-polo.webp"),
-    "خورشت قیمه": os.path.join("media", "foods", "gheimeh.webp"),
-    "استیک": os.path.join("media", "foods", "steak.webp"),
+    "قرمه سبزی": resource_path(os.path.join("media", "foods", "ghormeh-sabzi.webp")),
+    "جوجه کباب": resource_path(os.path.join("media", "foods", "joojeh kabab.webp")),
+    "کباب کوبیده": resource_path(os.path.join("media", "foods", "kabab.webp")),
+    "زرشک پلو با مرغ": resource_path(os.path.join("media", "foods", "zereshk-polo.webp")),
+    "خورشت قیمه": resource_path(os.path.join("media", "foods", "gheimeh.webp")),
+    "استیک": resource_path(os.path.join("media", "foods", "steak.webp")),
     # Beverages
-    "دلستر": os.path.join("media", "beverages", "delester.webp"),
-    "نوشابه": os.path.join("media", "beverages", "nooshabeh.webp"),
-    "دوغ": os.path.join("media", "beverages", "doogh.webp"),
-    "آب معدنی": os.path.join("media", "beverages", "mineral-water.webp"),
+    "دلستر": resource_path(os.path.join("media", "beverages", "delester.webp")),
+    "نوشابه": resource_path(os.path.join("media", "beverages", "nooshabeh.webp")),
+    "دوغ": resource_path(os.path.join("media", "beverages", "doogh.webp")),
+    "آب معدنی": resource_path(os.path.join("media", "beverages", "mineral-water.webp")),
     # Desserts
-    "بستنی سنتی": os.path.join("media", "desserts", "bastani-sonnati.webp"),
-    "شله زرد": os.path.join("media", "desserts", "shole-zard.webp"),
-    "فرنی": os.path.join("media", "desserts", "fereni.webp"),
-    "کیک شکلاتی": os.path.join("media", "desserts", "Cake.webp"),
-    "فالوده شیرازی": os.path.join("media", "desserts", "faloodeh.webp"),
+    "بستنی سنتی": resource_path(os.path.join("media", "desserts", "bastani-sonnati.webp")),
+    "شله زرد": resource_path(os.path.join("media", "desserts", "shole-zard.webp")),
+    "فرنی": resource_path(os.path.join("media", "desserts", "fereni.webp")),
+    "کیک شکلاتی": resource_path(os.path.join("media", "desserts", "Cake.webp")),
+    "فالوده شیرازی": resource_path(os.path.join("media", "desserts", "faloodeh.webp")),
 }
 
 MENU_DATA = {
