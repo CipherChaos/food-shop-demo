@@ -58,3 +58,9 @@ MANIFEST
 # Env files
 .env
 .env.*
+
+# Prevent markdown configs push
+.obsidian
+# Prevent report push
+reports/
+
