@@ -1,26 +1,29 @@
 General diagram of system
 
+```mermaid
 graph TD
-    A[کاربر] --> B[رابط کاربری PyQT]
-    B --> C[منطق برنامه]
-    C --> D[ذخیره‌سازی داده‌ها]
-    D --> E[JSON / SQLite]
-    
-    subgraph "لایه‌های برنامه"
-        B
-        C
-        D
-    end
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#fbb,stroke:#333,stroke-width:2px
-    style E fill:#ffb,stroke:#333,stroke-width:2px
+	A[کاربر] --> B[رابط کاربری PyQT]
+	B --> C[منطق برنامه]
+	C --> D[ذخیره‌سازی داده‌ها]
+	D --> E[JSON / SQLite]
+	
+	subgraph "لایه‌های برنامه"
+		B
+		C
+		D
+	end
+	
+	style A fill:#f9f,stroke:#333,stroke-width:2px
+	style B fill:#bbf,stroke:#333,stroke-width:2px
+	style C fill:#bfb,stroke:#333,stroke-width:2px
+	style D fill:#fbb,stroke:#333,stroke-width:2px
+	style E fill:#ffb,stroke:#333,stroke-width:2px
+```
 
 
 Class Diagram 
 
+```mermaid
 classDiagram
     class MainWindow {
         -product_list: QListWidget
@@ -75,9 +78,12 @@ classDiagram
     DataManager --> Order : ذخیره‌سازی
     CartItem --> Product : ارجاع به
     Order --> CartItem : شامل می‌شود
+```
+
 
 Sequence Diagram
 
+```mermaid
 sequenceDiagram
     actor کاربر
     participant UI as رابط کاربری
@@ -102,10 +108,13 @@ sequenceDiagram
     Logic->>Cart: خالی کردن سبد
     Logic-->>UI: نمایش پیام موفقیت
     UI-->>کاربر: نمایش رسید
+```
+
 
 
 Activity Diagram 
 
+```mermaid
 flowchart TD
     A[شروع] --> B[نمایش لیست محصولات]
     B --> C{کاربر چه عملی انجام می‌دهد؟}
@@ -132,10 +141,13 @@ flowchart TD
     style A fill:#9f9,stroke:#333,stroke-width:2px
     style O fill:#f99,stroke:#333,stroke-width:2px
     style C fill:#ff9,stroke:#333,stroke-width:2px
+```
+
 
 
 Component Diagram
 
+```mermaid
 graph LR
     subgraph Frontend["لایه نمایش (Frontend)"]
         MainWindow[پنجره اصلی]
@@ -170,10 +182,13 @@ graph LR
     style Frontend fill:#bbf,stroke:#333,stroke-width:2px
     style Backend fill:#bfb,stroke:#333,stroke-width:2px
     style Database fill:#fbb,stroke:#333,stroke-width:2px
+```
+
 
 
 State Diagram 
 
+```mermaid
 stateDiagram-v2
     [*] --> خالی
     خالی --> درحال_خرید: افزودن محصول
@@ -185,9 +200,12 @@ stateDiagram-v2
     تایید_نهایی --> ذخیره_سفارش: ذخیره در دیتابیس
     ذخیره_سفارش --> خالی: پاک کردن سبد
     ذخیره_سفارش --> [*]: پایان
+```
+
 
 Deployment Diagram
 
+```mermaid
 graph TD
     subgraph Development["محیط توسعه"]
         Dev[کد منبع Python]
@@ -221,4 +239,5 @@ graph TD
     style Development fill:#ffd,stroke:#333,stroke-width:2px
     style Build fill:#dff,stroke:#333,stroke-width:2px
     style Production fill:#fdf,stroke:#333,stroke-width:2px
+```
 

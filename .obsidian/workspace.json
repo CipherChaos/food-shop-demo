@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/algorithm.md",
+                "file": "docs/WBS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "algorithm"
+              "title": "WBS"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/algorithm.md",
+                "file": "docs/WBS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for algorithm"
+              "title": "Backlinks for WBS"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/algorithm.md",
+                "file": "docs/WBS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from algorithm"
+              "title": "Outgoing links from WBS"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/algorithm.md",
+                "file": "docs/WBS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of algorithm"
+              "title": "Outline of WBS"
             }
           }
         ]
@@ -185,10 +185,11 @@
   },
   "active": "df5ee2601edc45c5",
   "lastOpenFiles": [
-    "docs/architecture.md",
-    "docs/flowchart.md",
     "docs/SRS.md",
-    "docs/WBS.md",
-    "docs/algorithm.md"
+    "docs/flowchart.md",
+    "docs/architecture.md",
+    "docs/algorithm.md",
+    "docs/flowchart-guide.png",
+    "docs/WBS.md"
   ]
 }

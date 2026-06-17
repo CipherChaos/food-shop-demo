@@ -108,8 +108,7 @@
 
 ### ۵.۱ ساختار پوشه‌ها
 
-text
-
+```bash
 food-shop-demo/
 ├── app/                    # ماژول‌های اصلی برنامه
 │   ├── controllers/        # منطق کسب‌وکار
@@ -124,6 +123,8 @@ food-shop-demo/
 ├── main.py                 # نقطه ورود برنامه
 ├── profile.json            # تنظیمات کاربر
 └── requirements.txt        # وابستگی‌ها
+```
+
 
 ### ۵.۲ معماری لایه‌ها
 
@@ -185,7 +186,7 @@ food-shop-demo/
 
 **کد نمونه:**
 
-python
+```python
 
 from dataclasses import dataclass
 import json
@@ -194,6 +195,8 @@ class Product:
     name: str
     price: float
     description: str = ""
+```
+
 
 ### مرحله ۴: اتصال منطق به UI
 
